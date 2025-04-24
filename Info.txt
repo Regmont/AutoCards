@@ -1,0 +1,6 @@
+﻿Effect indexes:
+	0 - no effects
+	1 - battlecry
+	2 - deathrattle
+	3 - passive
+

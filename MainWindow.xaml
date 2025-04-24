@@ -1,0 +1,71 @@
+﻿<Window x:Class="AutoCards.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AutoCards"
+        mc:Ignorable="d"
+        Title="Da Game!" Height="1080" Width="1920">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="150"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBox Grid.Column="0" Background="Red"/>
+
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150"/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Column="0" Content="Lvl" FontSize="50"
+                       VerticalAlignment="Center" HorizontalAlignment="Center"
+                       Name="labelTavernLevel"/>
+                <Label Grid.Column="1" Content="Lvl" FontSize="50"
+                       VerticalAlignment="Center" HorizontalAlignment="Center"
+                       Name="labelTavernUp"/>
+                <Label Grid.Column="2" Content="Reroll" FontSize="50"
+                       VerticalAlignment="Center" HorizontalAlignment="Center"
+                       Name="labelReroll"/>
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0" Content="HP" FontSize="50"
+                   VerticalAlignment="Center" HorizontalAlignment="Center"
+                   Name="labelHP"/>
+            <Label Grid.Row="1" Content="$$$" FontSize="50"
+                   VerticalAlignment="Center" HorizontalAlignment="Center"
+                   Name="labelMoney"/>
+            <Label Grid.Row="2" Content="Ability" FontSize="50"
+                   VerticalAlignment="Center" HorizontalAlignment="Center"
+                   Name="labelPlayerAbility"/>
+            <Label Grid.Row="3" Content="Turn" FontSize="50"
+                   VerticalAlignment="Center" HorizontalAlignment="Center"
+                   Name="labelTurn"/>
+            <Label Grid.Row="4" Content="Timer" FontSize="50"
+                   VerticalAlignment="Center" HorizontalAlignment="Center"
+                   Name="labelTimer"/>
+        </Grid>
+    </Grid>
+</Window>
