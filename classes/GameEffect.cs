@@ -2,7 +2,7 @@
 
 namespace AutoCards
 {
-    class GameEffect
+    public class GameEffect
     {
         public string name { get; }
         public bool active { get; }

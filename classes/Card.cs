@@ -2,7 +2,7 @@
 
 namespace AutoCards
 {
-    class Card
+    public class Card
     {
         public string name { get; }
         public int rang { get; }

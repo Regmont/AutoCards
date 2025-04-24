@@ -2,7 +2,7 @@
 
 namespace AutoCards
 {
-    class Tavern
+    public class Tavern
     {
         public int level { get; set; } = 1;
         public int upgradeCost { get; set; } = 5;

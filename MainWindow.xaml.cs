@@ -1,32 +1,36 @@
-﻿using System.Windows;
+﻿using System.Collections.Generic;
+using System.Windows;
+using System.Windows.Input;
 
 namespace AutoCards
 {
     public partial class MainWindow : Window
     {
-        Deck Deck;
-        Tavern Tavern;
-        Player Player;
+        public Deck deck;
 
         public MainWindow()
         {
             InitializeComponent();
 
-            //Deck = new Deck(...);
-            //Tavern = new Tavern(...);
+            GameEffect effect = new GameEffect("Empty", false, 0);
+            List<GameEffect> effects = new List<GameEffect>() { effect };
+            Card card_1 = new Card("Basic card", 1, 1, 1, effects);
+            List<Card> cards_lvl_1 = new List<Card>() { card_1, card_1, card_1 };
+        }
 
-            GameEffect gameEffect = new GameEffect("Test", false, 0);
-            Player = new Player(gameEffect);
+        private void Grid_Initialized(object sender, System.EventArgs e)
+        {
+            MainMenu mainMenu = new MainMenu(deck);
+            mainMenu.Show();
+            Close();
+        }
 
-            labelTavernLevel.Content = "1";
-            labelTavernUp.Content = "5";
-            labelReroll.Content = "1";
-
-            labelHP.Content = Player.health;
-            labelMoney.Content = Player.money;
-            labelPlayerAbility.Content = Player.PlayerAbility.name;
-            labelTurn.Content = "1";
-            labelTimer.Content = "40";
+        private void Window_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            if (e.Key == Key.Escape)
+            {
+                Close();
+            }
         }
     }
 }

@@ -2,14 +2,14 @@
 
 namespace AutoCards
 {
-    class Deck
+    public class Deck
     {
-        List<Card> Cards_1 { get; set; }
-        List<Card> Cards_2 { get; set; }
-        List<Card> Cards_3 { get; set; }
-        List<Card> Cards_4 { get; set; }
-        List<Card> Cards_5 { get; set; }
-        List<Card> Cards_6 { get; set; }
+        public List<Card> Cards_1 { get; set; }
+        public List<Card> Cards_2 { get; set; }
+        public List<Card> Cards_3 { get; set; }
+        public List<Card> Cards_4 { get; set; }
+        public List<Card> Cards_5 { get; set; }
+        public List<Card> Cards_6 { get; set; }
 
         public Deck(
             List<Card> cards_1, List<Card> cards_2,
